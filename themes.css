@@ -1,0 +1,67 @@
+:root{color-scheme:light}
+.header-actions{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;padding:10px;border:1px solid #ccc;border-radius:4px;background:transparent;color:#111}
+.theme-toggle:hover{background:#f2f2f2;border-color:#888}
+.theme-toggle svg{width:20px;height:20px}
+.theme-sun{display:none}
+html[data-theme="dark"]{color-scheme:dark;--ink:#f3f3f3;--muted:#d5d5d5;--line:#383838;--paper:#171717;--dark-bg:#101010;--dark-card:#1c1c1c}
+html[data-theme="dark"] body{background:var(--dark-bg);color:var(--ink)}
+html[data-theme="dark"] :is(.hero .intro,.hero .roles span,.art-caption,.hero-art .speech,.section-head>p,.skill-grid p,.skill-grid small,.also span,.project p,.experience-grid p,.learning-timeline,.learning-timeline p,.learning-timeline small,.about-copy p,.bottom,.modal p,.project-sections p,.project-sections li,.steps li,#notice p,dialog){color:var(--ink)}
+html[data-theme="dark"] :is(.name-rule,.dot){background:var(--ink)}
+html[data-theme="dark"] .button{background:var(--dark-card);border-color:#626262;color:var(--ink)}
+html[data-theme="dark"] .button.black{background:#222222;border-color:#4b4b4b;color:#fff}
+html[data-theme="dark"] .button:hover{background:#303030;border-color:#777;color:#fff}
+html[data-theme="dark"] .hero-actions .social{border-color:#626262}
+html[data-theme="dark"] .hero-actions .social:hover{background:#242424;text-decoration:none}
+html[data-theme="dark"] .hero .roles span{background:#1a1a1a;border-color:#555}
+html[data-theme="dark"] .bubble-shape path{fill:var(--dark-bg)}
+html[data-theme="dark"] :is(.hero-art>img,.working-avatar,.about-profile-illustration,.project:not([data-category="Dados"]) .project-image img,.original-map img){filter:invert(1) grayscale(1);mix-blend-mode:screen}
+html[data-theme="dark"] .skill-grid{background:var(--dark-card);border-color:var(--line)}
+html[data-theme="dark"] .skill-grid article{border-color:var(--line)}
+html[data-theme="dark"] .tags span{background:#222;border-color:#454545;color:var(--ink)}
+html[data-theme="dark"] .filters button{background:var(--dark-bg);border-color:#454545;color:var(--ink)}
+html[data-theme="dark"] .filters button.active{background:#222222;color:#fff;border-color:#4b4b4b}
+html[data-theme="dark"] .project{background:var(--dark-card)}
+html[data-theme="dark"] .project:hover{border-color:#888}
+html[data-theme="dark"] .project-image{background:#181818}
+html[data-theme="dark"] .project[data-category="Dados"] .project-image{background:#080808}
+html[data-theme="dark"] .deliverable-type{background:#222222;border-color:#4b4b4b;color:#fff}
+html[data-theme="dark"] .all-projects{border-color:#666}
+html[data-theme="dark"] .learning-timeline article{border-color:#666}
+html[data-theme="dark"] .learning-timeline article:before{background:#eee;border-color:var(--paper)}
+html[data-theme="dark"] .contact{background:#080808;border-top:1px solid #303030}
+html[data-theme="dark"] .contact .form-actions .button{background:#222222;color:#fff;border-color:#4b4b4b}
+html[data-theme="dark"] .contact .form-actions .cv-button{background:#222222;color:#fff;border-color:#4b4b4b}
+html[data-theme="dark"] .contact .form-actions .button:hover{background:#303030;color:#fff}
+html[data-theme="dark"] :is(dialog,.close){background:var(--dark-card);border-color:#555;color:var(--ink)}
+html[data-theme="dark"] dialog::backdrop{background:#000b}
+html[data-theme="dark"] :is(.original-map,.project-sections section,.steps){background:#171717;border-color:#414141}
+html[data-theme="dark"] .theme-toggle{border-color:#626262;color:var(--ink)}
+html[data-theme="dark"] .theme-toggle:hover{background:#242424}
+html[data-theme="dark"] .theme-moon{display:none}
+html[data-theme="dark"] .theme-sun{display:block}
+html[data-theme="dark"] :focus-visible{outline-color:#eee}
+@media(max-width:1000px){.header-actions{gap:8px}header nav{gap:12px}}
+@media(max-width:620px){header .logo{max-width:40vw}.header-actions{gap:7px}header .nav-contact{padding:10px;font-size:9px;min-height:38px}header .nav-contact span{display:none}.theme-toggle{width:36px;height:38px;padding:8px}}
+/* Supply the illustration's blending backdrop inside transformed containers. */
+html[data-theme="dark"] .hero-art{background:var(--dark-bg)}
+html[data-theme="dark"] .about-skills.about-portrait{background:var(--dark-bg)}
+
+/* Dedicated dark artwork preserves white skin and natural facial features. */
+html[data-theme="dark"] :is(.hero-art>img,.working-avatar,.about-profile-illustration){filter:none;mix-blend-mode:normal}
+html[data-theme="dark"] img[data-dark-src]{filter:none!important;mix-blend-mode:normal!important}
+html[data-theme="dark"] .about-copy strong{color:inherit}
+html[data-theme="dark"] .about-profile-illustration[data-dark-src]{mix-blend-mode:screen!important}
+html[data-theme="dark"] .about-profile-illustration[data-dark-src]{mix-blend-mode:lighten!important}
+
+html[data-theme="dark"] .contact .form-actions button[type="submit"]{background:#000;color:#fff;border-color:#777}
+html[data-theme="dark"] .contact .form-actions button[type="submit"]:hover{background:#181818;color:#fff}
+/* Exact requested tone for the four highlighted controls. */
+html[data-theme="dark"] .deliverable-type,
+html[data-theme="dark"] .hero-actions>.button.black,
+html[data-theme="dark"] header .nav-contact,
+html[data-theme="dark"] .contact .form-actions .cv-button{background:#333333;color:#fff}
+html[data-theme="dark"] header{background:var(--dark-bg)}
+
+/* Visible labels describe the theme activated by the control. */
+.theme-toggle{width:auto;min-width:122px;gap:8px;padding:10px 12px;font-size:11px;font-weight:600;white-space:nowrap}.theme-toggle svg{flex-shrink:0;width:18px;height:18px}.theme-label-light{display:none}html[data-theme="dark"] .theme-label-dark{display:none}html[data-theme="dark"] .theme-label-light{display:inline}@media(min-width:621px) and (max-width:1000px){header .logo{max-width:170px;font-size:11px}header nav{font-size:11px;gap:12px}header .nav-contact{font-size:10px;padding:12px;gap:12px}.theme-toggle{min-width:108px;font-size:10px;gap:6px}}@media(max-width:620px){.theme-toggle{min-width:98px;height:38px;padding:8px;font-size:9px;gap:6px}.theme-toggle svg{width:16px;height:16px}}
